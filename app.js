@@ -14,6 +14,9 @@ import {REPOSITORY_OWNER, REPOSITORY_NAME, FILE_FILTER} from './config';
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME; 
 const GITHUB_PASSWORD = process.env.GITHUB_PASSWORD;
 
+console.log('Log ::: GITHUB_USERNAME ', GITHUB_USERNAME);
+console.log('Log ::: GITHUB_PASSWORD ', GITHUB_PASSWORD);
+
 // Github configuration
 
 const github = new GitHubApi({
