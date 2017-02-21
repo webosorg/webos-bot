@@ -23,9 +23,9 @@ const github = new GitHubApi({
   }
 });
 github.authenticate({
-    type: 'basic',
-    username: GITHUB_USERNAME,
-    password: GITHUB_PASSWORD
+  type: 'basic',
+  username: GITHUB_USERNAME,
+  password: GITHUB_PASSWORD
 });
 
 // Eslint configuration
