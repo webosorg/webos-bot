@@ -6,25 +6,28 @@
   "globals": {
     "ENV": true
   },
+  "ecmaFeatures": {
+    "modules": true
+  },
   "extends": "eslint:recommended",
   "parserOptions": {
     "sourceType": "module"
   },
   "rules": {
     "indent": [
-        2
+      2
     ],
     "linebreak-style": [
-        2,
-        "unix"
+      2,
+      "unix"
     ],
     "quotes": [
-        0,
-        "single"
+      0,
+      "single"
     ],
     "semi": [
-        2,
-        "always"
+      2,
+      "always"
     ],
     "no-undef": 0
   }

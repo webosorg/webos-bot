@@ -14,9 +14,6 @@ import {REPOSITORY_OWNER, REPOSITORY_NAME, FILE_FILTER} from './config';
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME; 
 const GITHUB_PASSWORD = process.env.GITHUB_PASSWORD;
 
-console.log('Log ::: GITHUB_USERNAME ', GITHUB_USERNAME);
-console.log('Log ::: GITHUB_PASSWORD ', GITHUB_PASSWORD);
-
 // Github configuration
 
 const github = new GitHubApi({
@@ -50,16 +47,16 @@ const getCommitsFromPayload = payload => payload.commits;
  * @param  {Object}   {id}          the commit object
  */
 const getFilesFromCommit = (callback, {id: sha}) => {
-    github.repos.getCommit({
-      user: REPOSITORY_OWNER,
-      repo: REPOSITORY_NAME,
-      sha
-    }, (error, {files}) => {
-      if (error) {
-        console.log(error);
-      }
-      callback(files, sha);
-    });
+  github.repos.getCommit({
+    user: REPOSITORY_OWNER,
+    repo: REPOSITORY_NAME,
+    sha
+  }, (error, {files}) => {
+    if (error) {
+      console.log(error);
+    }
+    callback(files, sha);
+  });
 };
 
 /**
@@ -178,7 +175,9 @@ const sendSingleComment = (
  * @param  {String} sha      Commit's id
  */
 const sendComments = ({filename, lineMap, messages, sha}) => {
-  messages.map(message => sendSingleComment(filename, lineMap, message, sha));
+  messages.map(message => {
+    sendSingleComment(filename, lineMap, message, sha);
+  });
 };
 
 /**
