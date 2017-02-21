@@ -154,6 +154,8 @@ const sendSingleComment = (
   sha
 ) => {
   const diffLinePosition = lineMap[line];
+  console.log('Log ::: DiffLinePosition ', diffLinePosition);
+  console.log('Log ::: lineMap, line ', lineMap, line);
   if (diffLinePosition) { // By testing this, we skip the linting messages related to non-modified lines.
     github.repos.createCommitComment({
       user: REPOSITORY_OWNER,
