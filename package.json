@@ -22,14 +22,13 @@
   },
   "homepage": "https://github.com/webosorg/webos-bot#readme",
   "dependencies": {
-    "body-parser": "^1.16.1",
+    "body-parser": "^1.13.3",
     "express": "^4.14.1",
     "atob": "^2.0.0",
-    "babel": "^5.8.23",
+    "babel": "^6.0.0",
     "babel-eslint": "^6.0.0",
-    "body-parser": "^1.13.3",
-    "eslint": "^1.3.1",
+    "eslint": "^2.1.0",
     "github": "^0.2.4",
-    "lodash": "^3.10.1"
+    "lodash": "^4.17.5"
   }
 }
